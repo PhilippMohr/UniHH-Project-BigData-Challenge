@@ -1,0 +1,13 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+bids.csv
+sampleSubmission.csv
+test.csv
+train.csv
+todo
+bids.Rda
+train.Rda
+test.Rda
+samplesubmission.Rda
