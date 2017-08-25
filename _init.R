@@ -9,3 +9,7 @@ library("ROSE")
 library("rpart")
 library("rpart.plot")
 library("nnet")
+
+### constant values
+
+timeunit <- 1000000000/19
