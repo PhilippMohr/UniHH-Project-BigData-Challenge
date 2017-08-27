@@ -36,4 +36,7 @@ source("features_basic_functions.R")
 ### add basic features to train and test
 source("features_basic.R")
 
+### add time stats to bids
+source("features_time_stats.R")
+
 ### EOF
