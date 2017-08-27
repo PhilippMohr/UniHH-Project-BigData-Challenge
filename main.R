@@ -25,9 +25,15 @@ source("data_import.R")
 source("data_cleanup.R")
 
 ### a first look at the data
-#source("data_first_glance.R", echo = TRUE)
+source("data_first_glance.R", echo = TRUE)
 
 ### analyse time in bids
-#source("data_time_analysis.R", echo = TRUE)
+source("data_time_analysis.R", echo = TRUE)
+
+### define functions to help create basic features
+source("features_basic_functions.R")
+
+### add basic features to train and test
+source("features_basic.R")
 
 ### EOF
