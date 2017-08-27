@@ -27,7 +27,7 @@ test$most_frequent_merchandise <- CalcFeatureMostFrequentItem(test$bidder_id, "m
 train$number_of_devices <- CalcFeatureNumberOfDifferentItems(train$bidder_id, "device")
 test$number_of_devices <- CalcFeatureNumberOfDifferentItems(test$bidder_id, "device")
 
-### most frequent auction ###
+### most frequent device ###
 train$most_frequent_device <- CalcFeatureMostFrequentItem(train$bidder_id, "device")
 test$most_frequent_device <- CalcFeatureMostFrequentItem(test$bidder_id, "device")
 
