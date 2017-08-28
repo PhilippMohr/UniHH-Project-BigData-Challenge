@@ -19,3 +19,30 @@ bids[(bids$prev_bid_auction!=bids$auction), "time_diff_to_prev_bid"] <- NA
 
 ### restore old row order of bids
 bids <- bids[order(bids$bid_id), ]
+
+
+### functions to assist calculating features ###
+
+CalcNumberOfFastBids <- function(id, t = 2) {
+  # Counts all fast bids by a bidder.
+  #
+  # Args:
+  #   id: The bidder's bidder_id.
+  #   t:  Max allowed time diff in kTimeunits for a fast bid. Default is 2.
+  #
+  # Returns:
+  #   Number of bids by bidder with time diff under t.
+  length(bids$time_diff_to_prev_bid[bids$bidder_id == id & bids$time_diff_to_prev_bid <= t])
+}
+
+CalcQuotaOfFastBids <- function(id, t = 2) {
+  # Computes quota of fast bids to all bids by a bidder.
+  #
+  # Args:
+  #   id: The bidder's bidder_id.
+  #   t:  Max allowed time diff in kTimeunits for a fast bid. Default is 2.
+  #
+  # Returns:
+  #   Number of fast bids divided by number of all bids plus 0.01.
+  CalcNumberOfFastBids(id, t) / (CalcNumberOfBids(id) + 0.01)
+}
