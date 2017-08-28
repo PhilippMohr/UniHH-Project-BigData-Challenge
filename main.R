@@ -42,4 +42,7 @@ source("features_time_stats_and_functions.R")
 ### add time features to train and test
 source("features_time.R")
 
+### analyse numeric features humans vs robots
+source("features_basic_analysis.R")
+
 ### EOF
