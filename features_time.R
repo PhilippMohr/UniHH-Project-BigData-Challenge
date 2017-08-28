@@ -27,6 +27,10 @@ test$quota_fast_bids_t5 <- sapply(test$bidder_id, function(id) CalcQuotaOfFastBi
 train$time_diff_bidder_mean <- sapply(train$bidder_id, function(id) mean((bids[bids$bidder_id == id, "time_diff_to_prev_bid_by_bidder"]), na.rm = TRUE))
 test$time_diff_bidder_mean <- sapply(test$bidder_id, function(id) mean((bids[bids$bidder_id == id, "time_diff_to_prev_bid_by_bidder"]), na.rm = TRUE))
 
+### 0.05 quantile of time diff to prev by bidder ###
+train$time_diff_bidder_05_quantile <- sapply(train$bidder_id, function(id) quantile((bids[bids$bidder_id == id, "time_diff_to_prev_bid_by_bidder"]), 0.05, na.rm = TRUE))
+test$time_diff_bidder_05_quantile <- sapply(test$bidder_id, function(id) quantile((bids[bids$bidder_id == id, "time_diff_to_prev_bid_by_bidder"]), 0.05, na.rm = TRUE))
+
 ### 0.1 quantile of time diff to prev by bidder ###
 train$time_diff_bidder_10_quantile <- sapply(train$bidder_id, function(id) quantile((bids[bids$bidder_id == id, "time_diff_to_prev_bid_by_bidder"]), 0.1, na.rm = TRUE))
 test$time_diff_bidder_10_quantile <- sapply(test$bidder_id, function(id) quantile((bids[bids$bidder_id == id, "time_diff_to_prev_bid_by_bidder"]), 0.1, na.rm = TRUE))
