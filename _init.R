@@ -8,4 +8,5 @@ setwd("D:/Data/R/UniHH-Project-BigData-Challenge/UniHH-Project-BigData-Challenge
 library("ROSE")
 library("rpart")
 library("rpart.plot")
+library("randomForest")
 library("nnet")
