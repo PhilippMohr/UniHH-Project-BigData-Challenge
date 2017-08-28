@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+*.csv
 bids.csv
 sampleSubmission.csv
 test.csv
