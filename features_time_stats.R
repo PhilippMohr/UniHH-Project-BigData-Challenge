@@ -2,9 +2,6 @@
 
 ### add column: time diff to previous bid in same auction ###
 
-### save current bids column order
-bids.column.order <- colnames(bids)
-
 ### order bids rows by auction and bid_id
 bids <- bids[order(bids$auction, bids$bid_id), ]
 
