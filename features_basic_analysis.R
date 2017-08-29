@@ -1,9 +1,14 @@
 ### a first look at the basic features
 
-### helper variable for current numeric stats in train dataset
-train.colnames.stats.numeric <- c("number_of_bids", "number_of_auctions", "number_of_merchandise", "number_of_devices", "number_of_countries", "number_of_ips", "number_of_urls", 
-  "time_diff_mean", "time_diff_10_quantile", "time_diff_25_quantile", "quota_fast_bids_t2", "quota_fast_bids_t5", "time_diff_bidder_mean", 
-  "time_diff_bidder_05_quantile", "time_diff_bidder_10_quantile", "time_diff_bidder_25_quantile")
+### helper variable for all current useful stats in train and test dataset
+train.colnames.stats <- colnames(train)[5:length(colnames(train))]
+
+### helper variable for current numeric stats in train and test dataset
+train.colnames.stats.numeric <- train.colnames.stats[c(1,2,4,6,8,10,12,14:(length(train.colnames.stats)))]
+
+### helper variable for current chr stats in train and test dataset
+train.colnames.stats.chr <- train.colnames.stats[c(3,5,7,9,11,13)]
+
 
 ### calc stats for all
 train.mean.all <- apply(train[, train.colnames.stats.numeric], 2, function(x) mean(x, na.rm = TRUE))
