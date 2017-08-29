@@ -123,5 +123,3 @@ nrow(test[!(test$bidder_id %in% bids$bidder_id), ])
 
 ### bidder_ids that also appear in train
 nrow(test[test$bidder_id %in% train$bidder_id, ])
-
-### EOF
