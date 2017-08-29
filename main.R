@@ -45,4 +45,10 @@ source("features_time.R")
 ### analyse numeric features humans vs robots
 source("features_basic_analysis.R")
 
+### create factors and replace na
+source("features_factors_and_rm_na.R")
+
+# first try rpart
+# first try rforest
+
 ### EOF
