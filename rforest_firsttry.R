@@ -15,3 +15,6 @@ submission.0828.firsttry.rf <- samplesubmission
 submission.0828.firsttry.rf$prediction <- prediction.0828.firsttry.rf
 
 write.csv(submission.0828.firsttry.rf, file = "submisson_0828_firsttry_rf.csv", row.names = FALSE)
+
+### including chr features
+#   Can not handle categorical predictors with more than 53 categories.
