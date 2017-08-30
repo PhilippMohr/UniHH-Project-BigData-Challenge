@@ -50,5 +50,6 @@ source("features_factors_and_rm_na.R")
 
 # first try rpart
 # first try rforest
+# first try nnet
 
 ### EOF
