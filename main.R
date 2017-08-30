@@ -59,6 +59,7 @@ source("features_factors_and_rm_na.R")
 ### split train data set into new train and test
 source("data_split_train_data_set.R")
 
-
+### handle imbalanced classification with ROSE
+source("data_imbalanced_classification_rose.R")
 
 ### EOF
