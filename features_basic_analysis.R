@@ -1,15 +1,5 @@
 ### a first look at the basic features
 
-### helper variable for all current useful stats in train and test dataset
-train.colnames.stats <- colnames(train)[5:length(colnames(train))]
-
-### helper variable for current numeric stats in train and test dataset
-train.colnames.stats.numeric <- train.colnames.stats[c(1,2,4,6,8,10,12,14:(length(train.colnames.stats)))]
-
-### helper variable for current chr stats in train and test dataset
-train.colnames.stats.chr <- train.colnames.stats[c(3,5,7,9,11,13)]
-
-
 ### calc stats for all
 train.mean.all <- apply(train[, train.colnames.stats.numeric], 2, function(x) mean(x, na.rm = TRUE))
 train.median.all <- apply(train[, train.colnames.stats.numeric], 2, function(x) quantile(x, 0.5, na.rm = TRUE))

@@ -1,7 +1,5 @@
 ### first try with random forest
 
-rforest.formula.numeric <-  as.formula(paste("as.factor(outcome) ~ ", gsub(",", " +", toString(train.colnames.stats.numeric))))
-
 rforest.0828.firsttry <- randomForest(rforest.formula.numeric, data = train, importance = TRUE, ntree = 2000)
 
 prediction.0828.firsttry.rf <- predict(tree.0828.firsttry, test)
