@@ -48,6 +48,9 @@ source("features_helper_variables.R")
 ### analyse numeric features humans vs robots
 source("features_basic_analysis.R")
 
+### create advanced features
+source("features_advanced.R")
+
 ### create factors and replace na
 source("features_factors_and_rm_na.R")
 
@@ -65,7 +68,10 @@ source("data_imbalanced_classification_rose.R")
 ### create trees and predictions for various train data sets
 source("evaluate_create_trees_and_predictions.R")
 
-### evaluate predictions with roc curves and f measure
+### create random forests and predictions for various train data sets
+source("evaluate_create_random_forests_and_predictions.R")
+
+### evaluate tree and rforest predictions with roc curves and f measure
 source("evaluate_roc_curves_of_classification_samples.R")
 
 ### create neural nets and predictions for various neuron layer configurations
