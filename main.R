@@ -68,4 +68,7 @@ source("evaluate_create_trees_and_predictions.R")
 ### evaluate predictions with roc curves and f measure
 source("evaluate_roc_curves_of_classification_samples.R")
 
+### create neural nets and predictions for various neuron layer configurations
+source("evaluate_create_neural_nets_various_layers.R")
+
 ### EOF
