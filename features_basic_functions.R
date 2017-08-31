@@ -13,7 +13,7 @@ CalcNumberOfDifferentItems <- function(id, column) {
 }
 
 CalcFeatureNumberOfDifferentItems <- function(idvector, column) {
-  # Create a vector of values from function CalcNumberOfDifferentItems.
+  # Creates a vector of values from function CalcNumberOfDifferentItems.
   #
   # Args: 
   #   idvector: Vector of bidder_ids, e.g. train$bidder_id.
@@ -41,7 +41,7 @@ CalcMostFrequentItem <- function(id, column) {
 }
 
 CalcFeatureMostFrequentItem <- function(idvector, column) {
-  # Create a vector of values from function CalcMostFrequentItem.
+  # Creates a vector of values from function CalcMostFrequentItem.
   #
   # Args: 
   #   idvector: Vector of bidder_ids, e.g. train$bidder_id.
