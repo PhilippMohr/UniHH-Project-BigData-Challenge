@@ -16,4 +16,6 @@ tree.formula.numeric <-  as.formula(paste("outcome ~ ", gsub(",", " +", toString
 
 tree.formula.all <-  as.formula(paste("outcome ~ ", gsub(",", " +", toString(train.colnames.stats))))
 
+nnet.formula.numeric <-  as.formula(paste("outcome ~ ", gsub(",", " +", toString(train.colnames.stats.numeric))))
+
 rforest.formula.numeric <-  as.formula(paste("as.factor(outcome) ~ ", gsub(",", " +", toString(train.colnames.stats.numeric))))
