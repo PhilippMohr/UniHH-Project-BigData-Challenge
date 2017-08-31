@@ -31,7 +31,3 @@ apply(data.frame(prediction.nnet.neurons.1000,
                  ),
       2, function(x) roc.curve(train.30$outcome, x)
 )
-
-
-
-
