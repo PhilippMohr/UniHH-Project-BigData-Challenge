@@ -65,7 +65,7 @@ source("data_imbalanced_classification_rose.R")
 ### create trees and predictions for various train data sets
 source("evaluate_create_trees_and_predictions.R")
 
-### evaluate predictions with roc curves
+### evaluate predictions with roc curves and f measure
 source("evaluate_roc_curves_of_classification_samples.R")
 
 ### EOF
