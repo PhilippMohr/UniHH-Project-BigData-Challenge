@@ -6,21 +6,21 @@ table(train.70$outcome)
 
 ### oversampling ###
 
-train.70.over <- ovun.sample(outcome ~ ., data = train.70, method = "over", N = 2632)$data
+train.70.over <- ovun.sample(outcome ~ ., data = train.70, method = "over", N = 2632, seed = 101)$data
 
 table(train.70.over$outcome)
 
 
 ### undersampling ###
 
-train.70.under <- ovun.sample(outcome ~ ., data = train.70, method = "under", N = 146)$data
+train.70.under <- ovun.sample(outcome ~ ., data = train.70, method = "under", N = 146, seed = 101)$data
 
 table(train.70.under$outcome)
 
 
 ### both ###
 
-train.70.both <- ovun.sample(outcome ~ ., data = train.70, method = "both", N = 584)$data
+train.70.both <- ovun.sample(outcome ~ ., data = train.70, method = "both", N = 584, seed = 101)$data
 
 table(train.70.both$outcome)
 
