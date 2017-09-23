@@ -8,6 +8,7 @@ bids.csv
 sampleSubmission.csv
 test.csv
 train.csv
+*.Rda
 todo
 bids.Rda
 train.Rda
