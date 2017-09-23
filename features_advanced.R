@@ -57,12 +57,7 @@ test$mean_bids_per_url <- CalcFeatureMeanBidsPerItem(test$bidder_id, "url")
 
 ### create stats vectors for each column
 
-stats.ratio.bot.to.all.auction <- sapply(unique(bids$auction), 
-       function(x) {
-         nrow(bids[bids$auction==x & bids$bidder_id %in% train[train$outcome==1, "bidder_id"],]) / 
-           (nrow(bids[bids$auction==x & bids$bidder_id %in% train$bidder_id,])+0.01)
-       }
-)
+
 
 stats.ratio.bot.to.all.device <- sapply(unique(bids$device), 
        function(x) {
@@ -76,6 +71,13 @@ stats.ratio.bot.to.all.country <- sapply(unique(bids$country),
          nrow(bids[bids$country==x & bids$bidder_id %in% train[train$outcome==1, "bidder_id"],]) / 
            (nrow(bids[bids$country==x & bids$bidder_id %in% train$bidder_id,])+0.01)
        }
+)
+
+stats.ratio.bot.to.all.auction <- sapply(unique(bids$auction), 
+                                         function(x) {
+                                           nrow(bids[bids$auction==x & bids$bidder_id %in% train[train$outcome==1, "bidder_id"],]) / 
+                                             (nrow(bids[bids$auction==x & bids$bidder_id %in% train$bidder_id,])+0.01)
+                                         }
 )
 
 stats.ratio.bot.to.all.ip <- sapply(unique(bids$ip), 
@@ -103,6 +105,12 @@ test$most_frequent_country_bot_ratio <- sapply(test$bidder_id, function(x) {stat
 
 train$most_frequent_device_bot_ratio <- sapply(train$bidder_id, function(x) {stats.ratio.bot.to.all.device[train[train$bidder_id == x, "most_frequent_device"]]})
 test$most_frequent_device_bot_ratio <- sapply(test$bidder_id, function(x) {stats.ratio.bot.to.all.device[test[test$bidder_id == x, "most_frequent_device"]]})
+
+### auction
+
+train$most_frequent_auction_bot_ratio <- sapply(train$bidder_id, function(x) {stats.ratio.bot.to.all.auction[train[train$bidder_id == x, "most_frequent_auction"]]})
+test$most_frequent_auction_bot_ratio <- sapply(test$bidder_id, function(x) {stats.ratio.bot.to.all.auction[test[test$bidder_id == x, "most_frequent_auction"]]})
+
 
 ### todo: other columns
 
