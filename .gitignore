@@ -2,6 +2,7 @@
 .Rhistory
 .RData
 .Ruserdata
+plots/
 *.csv
 bids.csv
 sampleSubmission.csv
