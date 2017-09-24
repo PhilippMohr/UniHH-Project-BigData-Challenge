@@ -1,7 +1,7 @@
 ### init
 
 ### set working directory
-setwd("D:/Data/R/UniHH-Project-BigData-Challenge/UniHH-Project-BigData-Challenge")
+#setwd("D:/Data/R/UniHH-Project-BigData-Challenge/UniHH-Project-BigData-Challenge")
 
 ### packages
 
