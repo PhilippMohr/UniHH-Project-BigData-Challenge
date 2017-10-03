@@ -70,6 +70,9 @@ plot(bids$time)
 sort(table(bids$country), decreasing = TRUE)
 #! note the "" country
 
+### plot of country and bid_id
+plot(sort(table(bids$country)))
+
 
 ### ip ###
 
