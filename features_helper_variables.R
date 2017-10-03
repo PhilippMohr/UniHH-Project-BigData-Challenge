@@ -30,7 +30,8 @@ train.colnames.stats <- c("number_of_bids",
                           "mean_bids_per_ip", 
                           "mean_bids_per_url",
                           "most_frequent_country_bot_ratio",
-                          "most_frequent_device_bot_ratio"
+                          "most_frequent_device_bot_ratio",
+                          "most_frequent_auction_bot_ratio"
                           )
 
 ### helper variable for current numeric stats in train and test dataset
